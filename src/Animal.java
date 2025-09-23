@@ -14,4 +14,11 @@ public class Animal {
         return "Animal{name=" + name + ", family=" + family + ", age=" + age + ", isMammal=" + isMammal + "}";
     }
 
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Animal other = (Animal) obj;
+        return name.equals(other.name);
+    }
 }
