@@ -64,4 +64,7 @@ public class Animal {
         Animal other = (Animal) obj;
         return name.equals(other.name);
     }
+    public Animal(){
+
+    }
 }

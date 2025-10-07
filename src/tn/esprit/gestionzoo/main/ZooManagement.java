@@ -1,6 +1,5 @@
 package tn.esprit.gestionzoo.main;
-import tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entities.Zoo;
+import tn.esprit.gestionzoo.entities.*;
 
 public class ZooManagement {
     /*public static void main(String[] args) {
@@ -78,12 +77,34 @@ public class ZooManagement {
         System.out.println("isZooFull: " + zoo2.isZooFull());
 
 
-        System.out.println("Le zoo avec le plus d’animaux est : " +  Zoo.comparerZoo(myZoo, zoo2) );
+        System.out.println("Le zoo avec le plus d’animaux est : " + Zoo.comparerZoo(myZoo, zoo2));
+
+
+        Aquatic a = new Aquatic();
+        Terrestrial t = new Terrestrial();
+        Dolphin d = new Dolphin();
+        Penguin p = new Penguin();
+
+        Aquatic a1 = new Aquatic("Fish", "Shark", 8, false, "Ocean");
+        Terrestrial t1 = new Terrestrial("Mammal", "Lion", 7, true, 4);
+
+        Dolphin d1 = new Dolphin("Mammal", "Dolphin", 12, true, "Sea", 25.5f);
+        Penguin p1 = new Penguin("Bird", "Penguin", 5, false, "Antarctica", 10.2f);
+
+
+
+        System.out.println(a1.toString());
+        System.out.println(t1.toString());
+        System.out.println(d1.toString());
+        System.out.println(p1.toString());
+
+
+        a1.swim();
+        d1.swim();
+        p1.swim();
 
     }
-
-
-    }
+}
 
 
 
