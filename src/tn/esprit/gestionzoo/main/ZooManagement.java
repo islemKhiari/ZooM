@@ -80,12 +80,13 @@ public class ZooManagement {
         System.out.println("Le zoo avec le plus d’animaux est : " + Zoo.comparerZoo(myZoo, zoo2));
 
 
-        Aquatic a = new Aquatic();
+        //Aquatic a = new Aquatic();
+
         Terrestrial t = new Terrestrial();
         Dolphin d = new Dolphin();
         Penguin p = new Penguin();
 
-        Aquatic a1 = new Aquatic("Fish", "Shark", 8, false, "Ocean");
+        //Aquatic a1 = new Aquatic("Fish", "Shark", 8, false, "Ocean");
         Terrestrial t1 = new Terrestrial("Mammal", "Lion", 7, true, 4);
 
         Dolphin d1 = new Dolphin("Mammal", "Dolphin", 12, true, "Sea", 25.5f);
@@ -93,15 +94,29 @@ public class ZooManagement {
 
 
 
-        System.out.println(a1.toString());
+        //System.out.println(a1.toString());
+
         System.out.println(t1.toString());
         System.out.println(d1.toString());
         System.out.println(p1.toString());
 
 
-        a1.swim();
+        /*a1.swim();
         d1.swim();
         p1.swim();
+
+         */
+
+
+
+        myZoo.addAquaticAnimal(d);
+        myZoo.addAquaticAnimal(d1);
+
+
+
+        System.out.println(d1.equals(p1));
+
+
 
     }
 }

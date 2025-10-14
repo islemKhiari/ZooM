@@ -8,9 +8,13 @@ public class Zoo {
     public static final int nbrCages = 25;
     private int nbAnimals;
 
-//    public Zoo(String name, String city, int nbrCages) {
+    Aquatic[] aquaticAnimals;
+    int aquaticCount = 0;
+
+    //    public Zoo(String name, String city, int nbrCages) {
         public Zoo(String name, String city) {
         animals = new Animal[nbrCages];
+        aquaticAnimals = new Aquatic[10];
         this.name = name;
         this.city = city;
         //this.nbrCages = nbrCages;
@@ -122,6 +126,46 @@ public class Zoo {
         }
     }
 
+    public void addAquaticAnimal(Aquatic aquatic) {
+        if (aquaticCount < 10) {
+            aquaticAnimals[aquaticCount] = aquatic;
+            aquaticCount++;
+        } else {
+            System.out.println("Tableau d’animaux aquatiques plein !");
+        }
     }
+    public float maxPenguinSwimmingDepth() {
+        float maxDepth = 0;
+
+        for (int i = 0; i < aquaticAnimals.length; i++) {
+            if (aquaticAnimals[i] instanceof Penguin) {
+                Penguin p = (Penguin) aquaticAnimals[i];
+                if (p.getSwimmingDepth() > maxDepth) {
+                    maxDepth = p.getSwimmingDepth();
+                }
+            }
+        }
+
+        return maxDepth;
+    }
+
+    public void displayNumberOfAquaticsByType() {
+        int countDolphins = 0;
+        int countPenguins = 0;
+
+        for (int i = 0; i < aquaticAnimals.length; i++) {
+            if (aquaticAnimals[i] instanceof Dolphin) {
+                countDolphins++;
+            } else if (aquaticAnimals[i] instanceof Penguin) {
+                countPenguins++;
+            }
+        }
+
+        System.out.println("Nbr de dauphins dans le zoo : " + countDolphins);
+        System.out.println("Nbr de pingouins dans le zoo : " + countPenguins);
+    }
+
+
+}
 
 
