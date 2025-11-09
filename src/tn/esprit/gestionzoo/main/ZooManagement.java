@@ -100,7 +100,6 @@ public class ZooManagement {
         }
 
 
-
         zoo2.displayZoo();
 
         System.out.println("la recherche du lion : " + zoo2.searchAnimal(zebra));
@@ -129,7 +128,6 @@ public class ZooManagement {
         Penguin p1 = new Penguin("Bird", "Penguin", 5, false, "Antarctica", 10.2f);
 
 
-
         //System.out.println(a1.toString());
 
         System.out.println(t1.toString());
@@ -144,13 +142,17 @@ public class ZooManagement {
          */
 
 
-
         myZoo.addAquaticAnimal(d);
         myZoo.addAquaticAnimal(d1);
 
 
-
         System.out.println(d1.equals(p1));
+
+        d1.eatMeat(Food.MEAT);
+        d1.eatMeat(Food.PLANT);
+        t1.eatPlantAndMeat(Food.BOTH);
+
+        t1.eatMeat(Food.MEAT);
 
 
 
