@@ -1,6 +1,6 @@
 ### IntelliJ IDEA ###
 out/
-!**/src/main/**/out/
+!**/src/prosit9.main/**/out/
 !**/src/test/**/out/
 
 ### Eclipse ###
@@ -12,7 +12,7 @@ out/
 .springBeans
 .sts4-cache
 bin/
-!**/src/main/**/bin/
+!**/src/prosit9.main/**/bin/
 !**/src/test/**/bin/
 
 ### NetBeans ###
