@@ -5,7 +5,8 @@ public class Zoo {
     private String name;
     private String city;
     //int nbrCages;
-    public static final int nbrCages = 25;
+    //public static final int nbrCages =25;
+    public static final int nbrCages =3;
     private int nbAnimals;
 
     Aquatic[] aquaticAnimals;
@@ -52,25 +53,21 @@ public class Zoo {
         this.nbAnimals = nbAnimals;
     }
 
+    public int getNbAnimals() {
+        return nbAnimals;
+    }
+
     public Animal[] getAnimals() {
         return animals;
     }
-
-
-
-
-
-
-
-
-    public void displayZoo() {
+public void displayZoo() {
         System.out.println("Zoo: " + name + " Ville: " + city + " Nb cages: " + nbrCages);}
 
     public String toString() {
         return "Zoo{name=" + name + ", city=" + city + ", nbrCages=" + nbrCages + "}";
     }
 
-    public boolean addAnimal(Animal animal) {
+    /*public boolean addAnimal(Animal animal) {
         if (isZooFull() ==false) {
             animals[nbAnimals] = animal;
             nbAnimals++;
@@ -82,7 +79,31 @@ public class Zoo {
             return false;
         }
 
+    }*/
+    /*
+    public void addAnimal(Animal animal) {
+
+            animals[nbAnimals] = animal;
+            nbAnimals++;
+            System.out.println(animal.getName() + " a été ajouté au zoo ");
+    }*/
+    public void addAnimal(Animal animal) throws ZooFullException, InvalidAgeException {
+        if (animal.getAge() < 0) {
+            throw new InvalidAgeException("L'âge de l'animal est invalide : " + animal.getName() + " (" + animal.getAge() + ")");
+        }
+        if (nbAnimals >= animals.length) {
+            throw new ZooFullException("Le zoo est plein ! Impossible d’ajouter " + animal.getName());
+        }
+
+        animals[nbAnimals] = animal;
+        nbAnimals++;
+        System.out.println(animal.getName() + " a été ajouté au zoo.");
+        System.out.println("Nombre d'animaux dans le zoo : " + nbAnimals);
     }
+
+
+
+
     public void displayAnimals() {
         System.out.println("Liste des animaux du zoo :");
         for (int i = 0; i < nbAnimals; i++) {

@@ -57,13 +57,49 @@ public class ZooManagement {
 
 
         Zoo zoo2 = new Zoo("My Zoo", "Paris");
+        Zoo zoo4 = new Zoo("My Zoo", "Tunis");
+
 
         Animal zebra_test = new Animal("Feline", "Zebra", 5, true);
-        zoo2.addAnimal(zebra_test);
+        /*zoo2.addAnimal(zebra_test);
         zoo2.addAnimal(lion);
 
         zoo2.addAnimal(zebra);
-        zoo2.addAnimal(monkey);
+        zoo2.addAnimal(monkey);*/
+        Animal animal_age_negatif = new Animal("Reptile", "Snake", -1, false);
+
+        //premiere exception
+        /*try {
+            zoo4.addAnimal(zebra_test);
+            zoo4.addAnimal(lion);
+
+            zoo4.addAnimal(zebra);
+            zoo4.addAnimal(monkey);
+        } catch (ZooFullException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        } finally {
+            System.out.println("Nombre total d’animaux dans le zoo : " + myZoo.getNbAnimals());
+        }*/
+
+        //les 2 exceptions
+        try {
+
+            myZoo.addAnimal(lion);
+            System.out.println("Nombre d’animaux : " + myZoo.getNbAnimals());
+
+            myZoo.addAnimal(zebra);
+            System.out.println("Nombre d’animaux : " + myZoo.getNbAnimals());
+
+            myZoo.addAnimal(monkey);
+            System.out.println("Nombre d’animaux : " + myZoo.getNbAnimals());
+            myZoo.addAnimal(animal_age_negatif);
+            System.out.println("Nombre d’animaux : " + myZoo.getNbAnimals());
+
+        } catch (InvalidAgeException | ZooFullException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
+
+
 
         zoo2.displayZoo();
 
