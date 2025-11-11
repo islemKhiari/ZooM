@@ -1,4 +1,4 @@
-package prosit9.entities;
+package tn.esprit.entities;
 
 import java.util.Objects;
 

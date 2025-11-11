@@ -1,10 +1,7 @@
-package prosit9.entities;
+package tn.esprit.entities;
 
 
 
-import prosit9.entities.Employe;
-import prosit9.entities.IGestion;
-import prosit9.entities.SocieteArrayList;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

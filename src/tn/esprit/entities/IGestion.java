@@ -1,4 +1,4 @@
-package prosit9.entities;
+package tn.esprit.entities;
 
 public interface IGestion<T> {
     public void ajouterEmploye(T t);

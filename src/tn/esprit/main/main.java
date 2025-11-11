@@ -1,7 +1,7 @@
-package prosit9.main;
+package tn.esprit.main;
 
-import prosit9.entities.SocieteArrayList ;
-import prosit9.entities.Employe ;
+import tn.esprit.entities.SocieteArrayList ;
+import tn.esprit.entities.Employe ;
 
 public class main {
     public static void main(String[] args) {
