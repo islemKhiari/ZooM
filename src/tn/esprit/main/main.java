@@ -4,6 +4,7 @@ import tn.esprit.entities.SocieteArrayList ;
 import tn.esprit.entities.Employe ;
 import tn.esprit.entities.DepartementHashSet;
 import tn.esprit.entities.Departement;
+import tn.esprit.entities.AffectationHashMap ;
 public class main {
     public static void main(String[] args) {
         SocieteArrayList societe = new SocieteArrayList();
@@ -61,4 +62,27 @@ public class main {
 
 
         }
+
+
+
+        AffectationHashMap X = new AffectationHashMap();
+
+        Employe ee1 = new Employe(1, "Khiari", "Islem", "IT", 2);
+        Employe ee2 = new Employe(2, "aaaa", "bbbbb", "RH", 3);
+
+        Departement dd1 = new Departement(10, "IT", 25);
+        Departement dd2 = new Departement(20, "Finance", 15);
+
+        X.ajouterEmployeDepartement(ee1, dd1);
+        X.ajouterEmployeDepartement(ee2, dd2);
+
+        System.out.println("Première Affichage ");
+        X.afficherEmployesEtDepartements();
+
+        X.ajouterEmployeDepartement(ee1, dd2);
+
+        System.out.println("\nprès modification");
+        X.afficherEmployesEtDepartements();
+
+
     }}
